@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 3, from LayoutIt!</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/my_script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<form role="form" class="form-inline">
+				<div class="form-group">
+					<label for="InputName1">
+						Nom
+					</label>
+					<input type="text" class="form-control" id="InputName1">
+				</div>
+				<div class="form-group"	 
+					<label for="InputFirstName1">
+						Prénom
+					</label>
+					<input type="text" class="form-control" id="InputFirstName1">
+				</div>
+				<button type="button" class="btn btn-default" onclick="add()">
+					Ajouter
+				</button>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Nom
+						</th>
+						<th>
+							Prénom
+						</th>
+					</tr>
+				</thead>
+				<tbody id="ClientsTable">
+					<tr>
+						<td>
+							Tallmann
+						</td>
+						<td>
+							Marguerite
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Dupont
+						</td>
+						<td>
+							Paul
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<form role="form" class="form-inline">
+                <div class="select-group">
+                    <label for="SelectClients">
+                        Choisir le client
+                    </label>
+                    <select name="client" class="form-control" id="SelectClients" onchange="del()">
+                        <option value="  "></option>
+                        <option value="Tallmann Marguerite">Tallmann Marguerite</option>
+                        <option value="Dupton Paul">Dupont Paul</option>
+                    </select>
+                </div>
+                <br/>
+				<div class="form-group"> 
+					<label for="InputName">
+						Nom
+					</label>
+					<input type="text" class="form-control" id="InputName">
+				</div>
+				<div class="form-group">
+					<label for="InputFisrtName">
+						Prénom
+					</label>
+					<input type="text" class="form-control" id="InputFirstName">
+				</div>
+				<button type="button" class="btn btn-default" onclick="del()">
+					Supprimer
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
