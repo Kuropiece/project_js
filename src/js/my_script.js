@@ -10,11 +10,16 @@ function add() {
         newOption = document.createElement("option");
     
     /*Adding input values into the table*/
-    document.getElementById("ClientsTable").appendChild(row);
-    row.appendChild(td1);
-    row.appendChild(td2);
-    td1.innerHTML = InputName;
-    td2.innerHTML = InputFirstName;
+    if(InputName === "" || InputFirstName === ""){ /*Avoids adding empty values to the table*/
+        alert("Veuillez entrer un nom correct.")
+        return;
+    }else{
+        document.getElementById("ClientsTable").appendChild(row);
+        row.appendChild(td1);
+        row.appendChild(td2);
+        td1.innerHTML = InputName;
+        td2.innerHTML = InputFirstName;
+    }
     
     /*Adding input values into the drop-down list*/
     document.getElementById("SelectClients").appendChild(newOption);
@@ -42,6 +47,7 @@ function listToText() {
 }
 function del() {
     "use strict";
+    /*Variable declaration*/
     var table = document.getElementById("ClientsTable"),
         tabTr = table.getElementsByTagName("tr"),
         trLength = tabTr.length,
@@ -49,5 +55,18 @@ function del() {
         tdLenght = tabTd.length,
         InputName = document.getElementById("InputName1").value,
         InputFirstName = document.getElementById("InputFirstName1").value;
-    alert("td : " + tdLenght + " " + "tr : " +trLength);
+
+    /*Browsing through the html table to find matching values*/
+    for (var i=0; i<tabTr.length; i++){
+        alert("1");
+        for (var iTd=0; iTd<tabTd.length; iTd++){
+            alert("2");
+            if(tabTd[iTd] === InputName){
+                alert("3");
+                if(tabTd[iTd+1] === InputFirstName){
+                    alert("4");
+                }
+            }
+        }
+    }
 }
