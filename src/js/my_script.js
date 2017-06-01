@@ -57,6 +57,7 @@ function del() {
         fullName = name + firstName,
         element = document.getElementById(fullName),
         list = document.getElementById("SelectClients");
+
     element.parentNode.removeChild(element);
     list.remove(list.selectedIndex);
     document.getElementById("DelName").value = "";
